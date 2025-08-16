@@ -2,7 +2,7 @@
 boolean Wkey, Akey, Skey, Dkey;
 
 
-PImage frogImage, carRImage, carLImage;
+PImage frogImage, carRImage, carLImage, houseImage;
 ArrayList<GameObject> allObjects;
 
 Car c;
@@ -16,6 +16,7 @@ void setup(){
   frogImage = loadImage("/images/frog.png");
   carRImage = loadImage("/images/carR.png");
   carLImage = loadImage("/images/carL.png");
+  houseImage = loadImage("/images/lily.png");
   allObjects = new ArrayList<GameObject>();
 
   c = new Car();
