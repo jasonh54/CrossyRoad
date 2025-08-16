@@ -4,21 +4,29 @@ boolean Wkey, Akey, Skey, Dkey;
 
 PImage frogImage, carRImage, carLImage;
 ArrayList<GameObject> allObjects;
-void setup(){
 
+Frog frog1;
+
+void setup(){
   size(800,800);
 
   frogImage = loadImage("/images/frog.png");
   carRImage = loadImage("/images/carR.png");
   carLImage = loadImage("/images/carL.png");
   allObjects = new ArrayList<GameObject>();
+  
+  frog1 = new Frog();
 
 }
 
 void draw(){
+  background(200);
+  
   for(int i = 0; i<allObjects.size(); i++){
     allObjects.get(i).update();
   }
+  
+  
 }
 
 public void keyPressed(){
