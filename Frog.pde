@@ -5,7 +5,7 @@ class Frog extends GameObject{
     super(frogImage, 400,750,50,50);
   }
   
-  public move(){
+  public void move(){
     if(Wkey == true){
       this.y -= 15;
     }
