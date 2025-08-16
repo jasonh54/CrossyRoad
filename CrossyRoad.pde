@@ -5,6 +5,9 @@ boolean Wkey, Akey, Skey, Dkey;
 PImage frogImage, carRImage, carLImage;
 ArrayList<GameObject> allObjects;
 
+Car c;
+
+
 Frog frog1;
 
 void setup(){
@@ -14,8 +17,12 @@ void setup(){
   carRImage = loadImage("/images/carR.png");
   carLImage = loadImage("/images/carL.png");
   allObjects = new ArrayList<GameObject>();
+
+  c = new Car();
+
   
   frog1 = new Frog();
+
 
 }
 
@@ -25,8 +32,7 @@ void draw(){
   for(int i = 0; i<allObjects.size(); i++){
     allObjects.get(i).update();
   }
-  
-  
+
 }
 
 public void keyPressed(){
