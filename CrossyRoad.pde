@@ -10,6 +10,11 @@ Car c;
 
 Frog frog1;
 
+House house1;
+House house2;
+House house3;
+House house4;
+
 void setup(){
   size(800,800);
 
@@ -23,6 +28,11 @@ void setup(){
 
   
   frog1 = new Frog();
+  
+  house1 = new House(60,75);
+  house2 = new House(150,75);
+  house3 = new House(650,75);
+  house4 = new House(740,75);
 
 
 }
