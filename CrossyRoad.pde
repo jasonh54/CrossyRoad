@@ -10,6 +10,11 @@ Spawner s;
 
 Frog frog1;
 
+House house1;
+House house2;
+House house3;
+House house4;
+
 void setup(){
   size(800,800);
 
@@ -23,6 +28,11 @@ void setup(){
   s = new Spawner();
   
   frog1 = new Frog();
+  
+  house1 = new House(50,75);
+  house2 = new House(275,75);
+  house3 = new House(475,75);
+  house4 = new House(700,75);
 
 
 }
@@ -64,4 +74,11 @@ public void keyReleased(){
   if(keyCode == 68){
     Dkey = false;
   }
+}
+
+public boolean collisionCheck(GameObject o1, GameObject o2){
+  if(abs(o1.x-o2.x) < (o1.w + o2.w)/2  && abs(o1.y-o2.y) < (o1.h + o2.h)/2 ){
+    return true;
+  }
+  return false;
 }

@@ -1,6 +1,9 @@
 class House extends GameObject{
   
-  public House(){
-    super(houseImage,20,75,50,50);
+  private int x;
+  private int y;
+  
+  public House(int x,int y){
+    super(houseImage,x,y,50,50);
   }
 }
