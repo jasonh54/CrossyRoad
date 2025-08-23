@@ -19,5 +19,13 @@ class Frog extends GameObject{
       this.x += 1;
     }
     
+    for(int i=0;i<allObjects.size();i++){
+      if(allObjects.get(i).tag == "car" && collisionCheck(this,allObjects.get(i)) == true){
+         noLoop();
+      }
+    }
+      
+    
+    
   }
 }
