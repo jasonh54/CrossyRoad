@@ -1,8 +1,8 @@
 class Car extends GameObject{
-  Car(){
-    super(carLImage, 100,400,10,10);
+  Car(PImage img, int x, int y){
+    super(img, x,y,50,50);
   }
-  public void move(){
-    x+=10;
+  public void move(int d){
+    x+=d;
   }
 }
