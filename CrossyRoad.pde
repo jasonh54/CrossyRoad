@@ -6,7 +6,7 @@ PImage frogImage, carRImage, carLImage, houseImage;
 ArrayList<GameObject> allObjects;
 
 Car c;
-
+Spawner s;
 
 Frog frog1;
 
@@ -20,7 +20,7 @@ void setup(){
   allObjects = new ArrayList<GameObject>();
 
   c = new Car();
-
+  s = new Spawner();
   
   frog1 = new Frog();
 
@@ -33,7 +33,7 @@ void draw(){
   for(int i = 0; i<allObjects.size(); i++){
     allObjects.get(i).update();
   }
-
+  s.timer();
 }
 
 public void keyPressed(){
