@@ -1,9 +1,12 @@
 
 boolean Wkey, Akey, Skey, Dkey;
+boolean housesTouched = false;
+int houseCount = 0;
 
 
 PImage frogImage, carRImage, carLImage, houseImage;
 ArrayList<GameObject> allObjects;
+
 
 Car c;
 Spawner s;
@@ -16,7 +19,13 @@ House house1;
 House house2;
 House house3;
 House house4;
+
+House house5;
+House house6;
+
+
 int lives;
+
 void setup(){
   size(800,800);
   lives = 3;
@@ -34,10 +43,12 @@ void setup(){
   
   frog1 = new Frog();
   
-  house1 = new House(50,75);
-  house2 = new House(275,75);
-  house3 = new House(475,75);
-  house4 = new House(700,75);
+  house1 = new House(116,75);
+  house2 = new House(232,75);
+  house3 = new House(348,75);
+  house4 = new House(464,75);
+  house5 = new House(580,75);
+  house6 = new House(696,75);
 
 
 }
@@ -99,4 +110,17 @@ public boolean collisionCheck(GameObject o1, GameObject o2){
     return true;
   }
   return false;
+}
+
+public void checkAllHouses(){
+  houseCount = 0;
+  for(int i=0;i<allObjects.size();i++){
+    if(allObjects.get(i).tag == "house" && allObjects.get(i).isTouched == true){
+      houseCount++;
+    }
+  }
+  
+  if(houseCount == 6){
+    noLoop();
+  }
 }
