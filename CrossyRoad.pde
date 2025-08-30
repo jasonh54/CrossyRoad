@@ -26,10 +26,10 @@ void setup(){
   houseImage = loadImage("/images/lily.png");
   allObjects = new ArrayList<GameObject>();
   
-  c = new Car(carRImage,0,400);
-  c2 = new Car(carLImage,800,500);
+  c = new Car(carRImage,0,600);
+  c2 = new Car(carLImage,800,450);
   c3 = new Car(carLImage,800,300);
-  c4 = new Car(carRImage,0,200);
+  c4 = new Car(carRImage,0,150);
   s = new Spawner();
   
   frog1 = new Frog();
@@ -43,8 +43,14 @@ void setup(){
 }
 
 void draw(){
-  background(200);
-  
+  background(81,206,109);
+  fill(149,149,149);
+  rect(0,580,800,50);
+  rect(0,430,800,50);
+  rect(0,270,800,50);
+  rect(0,130,800,50);
+  fill(113,172,203);
+  rect(0,0,800,130);
   for(int i = 0; i<allObjects.size(); i++){
     allObjects.get(i).update();
   }
