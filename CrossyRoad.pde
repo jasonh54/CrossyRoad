@@ -16,10 +16,10 @@ House house1;
 House house2;
 House house3;
 House house4;
-
+int lives;
 void setup(){
   size(800,800);
-
+  lives = 3;
   frogImage = loadImage("/images/frog.png");
   carRImage = loadImage("/images/carR.png");
   carLImage = loadImage("/images/carL.png");
@@ -51,6 +51,9 @@ void draw(){
   rect(0,130,800,50);
   fill(113,172,203);
   rect(0,0,800,130);
+  fill(0);
+  textSize(50);
+  text("lives: " + lives, 50,50);
   for(int i = 0; i<allObjects.size(); i++){
     allObjects.get(i).update();
   }
