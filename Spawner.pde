@@ -15,11 +15,11 @@ class Spawner {
     s3-=1;
     if(s == 0){
       
-      c = new Car(carRImage,0,400);
+      c = new Car(carRImage,0,600);
       s = (int)(random(100,150));
     }
     if(s1 == 0){
-      c2 = new Car(carLImage,800,500);
+      c2 = new Car(carLImage,800,450);
       
       s1 = (int)(random(100,150));
     }
@@ -28,7 +28,7 @@ class Spawner {
       s2 = (int)(random(100,150));
     }
     if(s3 == 0){
-      c4 = new Car(carRImage,0,200);
+      c4 = new Car(carRImage,0,150);
       s3 = (int)(random(100,150));
     }
   }
