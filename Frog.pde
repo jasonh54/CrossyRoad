@@ -3,6 +3,7 @@ class Frog extends GameObject{
   
   public Frog(){
     super(frogImage, 400,750,50,50);
+    
   }
   
   public void move(){
@@ -21,7 +22,12 @@ class Frog extends GameObject{
     
     for(int i=0;i<allObjects.size();i++){
       if(allObjects.get(i).tag == "car" && collisionCheck(this,allObjects.get(i)) == true){
-         noLoop();
+         lives-=1;
+         this.x = 400;
+         this.y = 750;
+         if(lives == 0){
+           noLoop();
+         }
       }
     }
       
